@@ -15,6 +15,8 @@ import { MonoText } from '../components/StyledText';
 
 import { StackNavigator } from 'react-navigation';
 
+import NameLogo from '../assets/icons/namelogo.png';
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
@@ -23,10 +25,16 @@ export default class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-    <View style={styles.mainContainer}>
+    <ScrollView style={styles.mainContainer}>
       <View style={styles.nameLogoContainer}>
+        <Image source={NameLogo}/>
       </View>
-    </View> 
+      <View>
+        <Text style={styles.introText}>
+          Welcome to the guide to make your wonderful drink dreams come true!
+        </Text>
+      </View>
+    </ScrollView> 
     );
   }
 
@@ -73,12 +81,29 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#EFCFB6',
+    backgroundColor: '#555358',
   },
   nameLogoContainer: {
     alignItems: 'center',
     flex: 1,
-    borderWidth: 10,
+    margin: 10,
+    marginTop: 50,
+    padding: 20,
+    backgroundColor: '#7B7263',
+    borderWidth: 5,
+    borderRadius: 2,
+  },
+  introText: {
+    flex: 1,
+    borderWidth: 5,
+    borderRadius: 2,
+    margin: 10,
+    padding: 20,
+    fontSize: 26,
+    textAlign: 'center',
+    color: '#B1DBCE',
+    backgroundColor: '#7B7263',
+    fontFamily: 'Menlo',
   },
   developmentModeText: {
     marginBottom: 20,
