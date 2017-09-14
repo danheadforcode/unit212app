@@ -12,11 +12,11 @@ import CoffeeGuide from '../screens/CoffeeGuide';
 
 export default TabNavigator(
   {
-    Home: {
-      screen: HomeScreen,
-    },
     Tea: {
       screen: TeaGuide,
+    },
+    Home: {
+      screen: HomeScreen,
     },
     Coffee: {
       screen: CoffeeGuide,
@@ -28,15 +28,15 @@ export default TabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         switch (routeName) {
-          case 'Home':
-            iconName = Platform.OS === 'ios'
-              ? `ios-information-circle${focused ? '' : '-outline'}`
-              : 'md-information-circle';
-            break;
           case 'Tea':
             iconName = Platform.OS === 'ios'
               ? `ios-options${focused ? '' : '-outline'}`
               : 'md-options';
+            break;
+          case 'Home':
+            iconName = Platform.OS === 'ios'
+              ? `ios-home${focused ? '' : '-outline'}`
+              : 'md-home';
             break;
           case 'Coffee':
             iconName = Platform.OS === 'ios'
@@ -55,7 +55,8 @@ export default TabNavigator(
     }),
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
-    animationEnabled: false,
+    animationEnabled: true,
     swipeEnabled: false,
+    startingTab:'HomeScreen',
   }
 );

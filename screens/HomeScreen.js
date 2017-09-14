@@ -24,13 +24,8 @@ export default class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
     <View style={styles.mainContainer}>
-
-        <View style={styles.containerTea}>
-          <Button title='Tea' onPress={() => navigate('Tea')}/>
-        </View>
-          <View style={styles.containerCoffee}>  
-            <Button title='Coffee' onPress={() => navigate('Coffee')}/>
-          </View>
+      <View style={styles.nameLogoContainer}>
+      </View>
     </View> 
     );
   }
@@ -78,25 +73,12 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    marginHorizontal: 2,
-    backgroundColor: '#E2E2E2',
-
+    backgroundColor: '#EFCFB6',
   },
-  containerTea: {
-    borderWidth: 5,
-    borderRadius: 15,
+  nameLogoContainer: {
+    alignItems: 'center',
     flex: 1,
-    marginVertical:2, 
-  },
-  containerCoffee: {
-    borderWidth: 5,
-    borderRadius: 15,
-    flex: 1,
-    marginVertical: 2,
-},
-  choiceContainer: {
-    borderWidth: 5,
-    borderColor: 'red',
+    borderWidth: 10,
   },
   developmentModeText: {
     marginBottom: 20,
@@ -158,7 +140,7 @@ const styles = StyleSheet.create({
     }),
 
     alignItems: 'center',
-    backgroundColor: '#fbfbfb',
+    backgroundColor: '#EFCFB6',
     paddingVertical: 20,
   },
   tabBarInfoText: {

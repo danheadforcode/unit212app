@@ -60,10 +60,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fad6a5',
+    backgroundColor: '#fbfbfb',
   },
   statusBarUnderlay: {
     height: 24,
-    backgroundColor: '#fad6a5',
+    backgroundColor: '#fbfbfb',
   },
 });
