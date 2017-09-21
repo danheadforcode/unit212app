@@ -40,8 +40,8 @@ export default TabNavigator(
             break;
           case 'Coffee':
             iconName = Platform.OS === 'ios'
-            ? `ios-options${focused ? '' : '-outline'}`
-            : 'md-opitions';    
+            ? `icon ion-coffee${focused ? '' : '-outline'}`
+            : 'icon ion-coffee';    
         }
         return (
           <Ionicons
@@ -55,9 +55,14 @@ export default TabNavigator(
     }),
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
-    animationEnabled: true,
+    animationEnabled: false,
     swipeEnabled: false,
     initialRouteName: 'Home',
+    tabBarOptions: {
+    activeBackgroundColor: '#5F6062',
+    inactiveBackgroundColor: '#5F6062',
+    showLabel: false,
     
+  },
   }
 );

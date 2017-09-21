@@ -19,7 +19,7 @@ import NameLogo from '../assets/icons/namelogo.png';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Home',
+    header: null,
   };
 
   render() {
@@ -34,12 +34,9 @@ export default class HomeScreen extends React.Component {
           Welcome to the guide to make your wonderful drink dreams come true!
         </Text>
       </View>
+      <I class="icon ion-home"></I>
     </ScrollView> 
     );
-  }
-
-  _onPressButton  = () => {
-  navigate('coffee');
 };
 
   _maybeRenderDevelopmentModeWarning() {

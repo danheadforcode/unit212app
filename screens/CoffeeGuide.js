@@ -15,7 +15,7 @@ import CoffeeStep4 from '../assets/images/step4-coffee.jpg';
 
 export default class CoffeeGuide extends React.Component {
   static navigationOptions = {
-    title: 'How to Make Coffee'
+    header: null,
   };
 
   render() {
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 15,
-    backgroundColor: '#EFCFB6',
+    backgroundColor: '#555358',
   },
   listContainer: {
     flex: 1,
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     padding: 2,
     fontSize: 18,
     textAlign: 'left',
+    color: '#B1DBCE'
   },
   teaTitle: {
       fontSize: 30,
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
       textAlign: 'left',
       paddingHorizontal: 10,
       paddingTop: 10,
-      color: '#555555'
+      color: '#B1DBCE'
   },
   coffeeStepImage: {
       width: '95%',
