@@ -1,3 +1,11 @@
+/**
+ * Homescreen.js
+ * 
+ * This screen is the first screen that the user sees when starting the app
+ * It is from here that they can navigate to other areas os the application
+ * 
+ */
+
 import React from 'react';
 import {
   Image,
